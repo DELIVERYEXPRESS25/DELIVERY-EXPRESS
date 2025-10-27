@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Delivery Express - Tu lo pides, Nosotros lo llevamos</title>
+    <meta name="description" content="Servicio de delivery rápido y confiable en Chinandega. Pedidos de comida, farmacia, documentos y más." />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚚</text></svg>">
+
+    <!-- Facebook Page Plugin SDK -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v18.0" nonce="delivery-express"></script>
+
     <style>
         * {
             margin: 0;
@@ -15,7 +23,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f5f5f5;
+            background-color: #f9fafb;
         }
 
         .container {
@@ -26,10 +34,10 @@
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
             padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
         }
 
         .header .container {
@@ -41,9 +49,9 @@
         }
 
         .logo img {
-            max-width: 200px;
+            max-width: 180px;
             height: auto;
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         .contact-info {
@@ -63,99 +71,101 @@
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
         }
 
         .whatsapp-btn:hover {
             background-color: #128C7E;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
             color: white;
-            padding: 80px 0;
+            padding: 70px 0;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
 
         .tagline {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+            font-size: 1.6rem;
+            margin-bottom: 12px;
             font-weight: 600;
         }
 
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             opacity: 0.95;
         }
 
         /* Products Section */
         .products {
-            padding: 60px 0;
+            padding: 70px 0;
             background-color: #fff;
         }
 
         .products h2 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             margin-bottom: 50px;
-            color: #667eea;
+            color: #1e3c72;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
         .product-card {
             background: white;
-            border-radius: 15px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
         }
 
         .product-image {
             width: 100%;
-            height: 250px;
+            height: 220px;
             object-fit: cover;
+            background-color: #f0f4f8;
         }
 
         .product-info {
-            padding: 20px;
+            padding: 22px;
         }
 
         .product-info h3 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 10px;
-            color: #333;
+            color: #2c3e50;
         }
 
         .product-info p {
-            color: #666;
-            margin-bottom: 15px;
+            color: #555;
+            margin-bottom: 18px;
+            font-size: 1rem;
         }
 
         .order-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 12px 30px;
+            padding: 12px 28px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
@@ -163,50 +173,50 @@
         }
 
         .order-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            transform: scale(1.04);
+            box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
         }
 
         /* Order Form Section */
         .order-form {
-            padding: 60px 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 70px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
         .order-form h2 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             margin-bottom: 40px;
-            color: #667eea;
+            color: #1e3c72;
         }
 
         #orderForm {
-            max-width: 600px;
+            max-width: 620px;
             margin: 0 auto;
             background: white;
             padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 24px;
         }
 
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #333;
+            color: #2c3e50;
         }
 
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
+            padding: 13px 16px;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
             font-size: 1rem;
             transition: all 0.3s ease;
             font-family: inherit;
@@ -216,8 +226,8 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: #1e3c72;
+            box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.12);
         }
 
         .submit-btn {
@@ -238,15 +248,33 @@
         }
 
         .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+        }
+
+        /* Facebook Feed Section */
+        .facebook-feed {
+            padding: 70px 0;
+            background-color: #fff;
+        }
+
+        .facebook-feed h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 40px;
+            color: #1e3c72;
+        }
+
+        .fb-page {
+            margin: 0 auto;
+            max-width: 500px;
         }
 
         /* Footer */
         .footer {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            padding: 40px 0 20px;
+            padding: 45px 0 25px;
         }
 
         .footer-content {
@@ -257,46 +285,47 @@
         }
 
         .footer-section h3 {
-            margin-bottom: 15px;
-            font-size: 1.3rem;
+            margin-bottom: 16px;
+            font-size: 1.35rem;
         }
 
         .footer-section p {
             margin-bottom: 10px;
-            opacity: 0.9;
+            opacity: 0.92;
         }
 
         .social-links {
             display: flex;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 14px;
+            margin-top: 16px;
         }
 
         .social-links a {
             color: white;
             text-decoration: none;
             padding: 8px 16px;
-            background-color: rgba(255,255,255,0.2);
+            background-color: rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background-color: rgba(255,255,255,0.3);
+            background-color: rgba(255, 255, 255, 0.35);
             transform: translateY(-2px);
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            opacity: 0.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.85;
+            font-size: 0.95rem;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             .tagline {
@@ -304,7 +333,8 @@
             }
 
             .products h2,
-            .order-form h2 {
+            .order-form h2,
+            .facebook-feed h2 {
                 font-size: 2rem;
             }
 
@@ -312,12 +342,13 @@
                 grid-template-columns: 1fr;
             }
 
-            #orderForm {
+            #orderForm,
+            .fb-page {
                 padding: 25px;
             }
 
             .logo img {
-                max-width: 150px;
+                max-width: 140px;
             }
         }
     </style>
@@ -330,7 +361,7 @@
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/476648611_122136490862399840_2791286509310930747_n-jqH74h4EDLTnGJ77rgh9yKO3WfGy6I.jpg" alt="Delivery Express Logo">
             </div>
             <div class="contact-info">
-                <a href="https://wa.me/50581849385" class="whatsapp-btn" target="_blank">
+                <a href="https://wa.me/50581849385" class="whatsapp-btn" target="_blank" rel="noopener">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                     </svg>
@@ -353,9 +384,7 @@
     <section class="products" id="productos">
         <div class="container">
             <h2>Nuestros Servicios</h2>
-            <div class="products-grid" id="productsGrid">
-                <!-- Products will be loaded here by JavaScript -->
-            </div>
+            <div class="products-grid" id="productsGrid"></div>
         </div>
     </section>
 
@@ -368,34 +397,28 @@
                     <label for="nombre">Nombre Completo *</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
-
                 <div class="form-group">
                     <label for="telefono">Teléfono *</label>
                     <input type="tel" id="telefono" name="telefono" required>
                 </div>
-
                 <div class="form-group">
                     <label for="direccion">Dirección de Entrega *</label>
                     <textarea id="direccion" name="direccion" rows="3" required></textarea>
                 </div>
-
                 <div class="form-group">
                     <label for="producto">Producto/Servicio *</label>
                     <select id="producto" name="producto" required>
-                        <option value="">Seleccione un producto</option>
+                        <option value="">Seleccione un servicio</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="cantidad">Cantidad *</label>
                     <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
                 </div>
-
                 <div class="form-group">
                     <label for="detalles">Detalles Adicionales</label>
                     <textarea id="detalles" name="detalles" rows="4" placeholder="Especificaciones, preferencias, horario de entrega, etc."></textarea>
                 </div>
-
                 <button type="submit" class="submit-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -403,6 +426,23 @@
                     Enviar Pedido por WhatsApp
                 </button>
             </form>
+        </div>
+    </section>
+
+    <!-- Facebook Feed Section -->
+    <section class="facebook-feed">
+        <div class="container">
+            <h2>Lo que publicamos en Facebook</h2>
+            <div class="fb-page"
+                data-href="https://www.facebook.com/profile.php?id=61561995202342"
+                data-tabs="timeline"
+                data-width="500"
+                data-height="500"
+                data-small-header="false"
+                data-adapt-container-width="true"
+                data-hide-cover="false"
+                data-show-facepile="true">
+            </div>
         </div>
     </section>
 
@@ -419,8 +459,8 @@
                     <h3>Contacto</h3>
                     <p>WhatsApp: (505) 8184-9385</p>
                     <div class="social-links">
-                        <a href="#" target="_blank">Facebook</a>
-                        <a href="#" target="_blank">TikTok</a>
+                        <a href="https://www.facebook.com/profile.php?id=61561995202342" target="_blank" rel="noopener">Facebook</a>
+                        <a href="#" target="_blank" rel="noopener">TikTok</a>
                     </div>
                 </div>
             </div>
@@ -431,53 +471,20 @@
     </footer>
 
     <script>
-        // Products data
         const products = [
-            {
-                id: 1,
-                name: "Delivery de Comida",
-                description: "Recogemos y entregamos tus pedidos de comida favorita",
-                image: "/placeholder.svg?height=250&width=400"
-            },
-            {
-                id: 2,
-                name: "Envío de Documentos",
-                description: "Entrega rápida y segura de documentos importantes",
-                image: "/placeholder.svg?height=250&width=400"
-            },
-            {
-                id: 3,
-                name: "Compras Express",
-                description: "Hacemos tus compras y las llevamos a tu puerta",
-                image: "/placeholder.svg?height=250&width=400"
-            },
-            {
-                id: 4,
-                name: "Envío de Paquetes",
-                description: "Transporte seguro de paquetes dentro de la ciudad",
-                image: "/placeholder.svg?height=250&width=400"
-            },
-            {
-                id: 5,
-                name: "Delivery de Farmacia",
-                description: "Recogemos tus medicamentos y los entregamos rápidamente",
-                image: "/placeholder.svg?height=250&width=400"
-            },
-            {
-                id: 6,
-                name: "Servicios Personalizados",
-                description: "Cualquier diligencia que necesites, nosotros la hacemos",
-                image: "/placeholder.svg?height=250&width=400"
-            }
+            { id: 1, name: "Delivery de Comida", description: "Recogemos y entregamos tus pedidos de comida favorita", image: "https://via.placeholder.com/400x250/e0e0e0/000000?text=Comida" },
+            { id: 2, name: "Envío de Documentos", description: "Entrega rápida y segura de documentos importantes", image: "https://via.placeholder.com/400x250/e0e0e0/000000?text=Documentos" },
+            { id: 3, name: "Compras Express", description: "Hacemos tus compras y las llevamos a tu puerta", image: "https://via.placeholder.com/400x250/e0e0e0/000000?text=Compras" },
+            { id: 4, name: "Envío de Paquetes", description: "Transporte seguro de paquetes dentro de la ciudad", image: "https://via.placeholder.com/400x250/e0e0e0/000000?text=Paquetes" },
+            { id: 5, name: "Delivery de Farmacia", description: "Recogemos tus medicamentos y los entregamos rápidamente", image: "https://via.placeholder.com/400x250/e0e0e0/000000?text=Farmacia" },
+            { id: 6, name: "Servicios Personalizados", description: "Cualquier diligencia que necesites, nosotros la hacemos", image: "https://via.placeholder.com/400x250/e0e0e0/000000?text=Personalizado" }
         ];
 
-        // Load products
         function loadProducts() {
             const productsGrid = document.getElementById('productsGrid');
             const productSelect = document.getElementById('producto');
             
             products.forEach(product => {
-                // Create product card
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.innerHTML = `
@@ -490,7 +497,6 @@
                 `;
                 productsGrid.appendChild(card);
 
-                // Add to select dropdown
                 const option = document.createElement('option');
                 option.value = product.name;
                 option.textContent = product.name;
@@ -498,15 +504,12 @@
             });
         }
 
-        // Select product from card
         function selectProduct(productName) {
             document.getElementById('producto').value = productName;
         }
 
-        // Handle form submission
         document.getElementById('orderForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const nombre = document.getElementById('nombre').value;
             const telefono = document.getElementById('telefono').value;
             const direccion = document.getElementById('direccion').value;
@@ -514,7 +517,6 @@
             const cantidad = document.getElementById('cantidad').value;
             const detalles = document.getElementById('detalles').value;
 
-            // Create WhatsApp message
             const message = `*NUEVO PEDIDO - DELIVERY EXPRESS*%0A%0A` +
                 `*Nombre:* ${nombre}%0A` +
                 `*Teléfono:* ${telefono}%0A` +
@@ -524,16 +526,12 @@
                 `${detalles ? `*Detalles:* ${detalles}%0A` : ''}%0A` +
                 `_Gracias por confiar en Delivery Express_`;
 
-            // Open WhatsApp
-            const whatsappURL = `https://wa.me/50581849385?text=${message}`;
+            const whatsappURL = `https://wa.me/50581849385?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, '_blank');
-
-            // Reset form
             this.reset();
             alert('¡Tu pedido será enviado por WhatsApp! Gracias por confiar en nosotros.');
         });
 
-        // Load products when page loads
         document.addEventListener('DOMContentLoaded', loadProducts);
     </script>
 </body>
